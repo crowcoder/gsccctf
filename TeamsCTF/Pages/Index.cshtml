@@ -1,0 +1,358 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "GSCC CTF";
+}
+
+<style type="text/css">
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .heading {
+        color: #6364a5;
+        font-size: 2em;
+    }
+
+    .inmiddle {
+        align-self: center;
+        justify-self: center;
+    }
+
+    .leethdr {
+        color: #ff0000;
+        text-shadow: 1px 1px 1px #808080, 0 0 .5em blue, 0 0 0.2em blue;
+        font-family: Courier New, Courier, monospace;
+        font-size: 3.5em;
+    }
+
+    .challenge-cards {
+        margin-top: 30px;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(3, minmax(200px, 1fr) );
+        grid-auto-rows: auto;
+    }
+
+    .challenge-card {
+        border: 1px solid white;
+        border-radius: 4px;
+    }
+
+    .challenge-card-content {
+        display: grid;
+        grid-gap: 5px;
+        grid-row: auto;
+    }
+
+    .challenge-title {
+        color: #b6ff00;
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    .challenge-details {
+        margin-top: 10px;
+        margin-left: 10px;        
+    }
+
+    .challenge-detail-spacing {
+        margin-right: 20px;
+    }
+
+    .challenge-points {
+        font-weight: 600;
+        color: #ff6a00;
+        font-family: Courier New, Courier, monospace
+    }
+
+    .challenge-category {
+        font-weight: 600;
+        color: #37a0e6;
+    }
+
+    .challenge-status {
+        font-weight: 600;
+        color: #0094ff;
+    }
+
+</style>
+
+<div class="wrapper">
+    <div class="inmiddle"><span class="leethdr">c4p7ur3 7h3 fl46</span></div>
+    <div><span class="heading">Challenges</span></div>
+</div>
+
+<div class="challenge-cards">
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">Encryption</span>
+                    <span class="challenge-points challenge-detail-spacing">200 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Rainbows and unicorns. Minus the unicorns.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">SQL</span>
+                    <span class="challenge-points challenge-detail-spacing">100 pts</span>
+                    <span class="challenge-status">&#10004;</span>
+                </div>
+                <div class="challenge-title">
+                    Little Bobby Tables forgot his password.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">Encoding</span>
+                    <span class="challenge-points challenge-detail-spacing">200 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Image is everything.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">Code Breaker</span>
+                    <span class="challenge-points challenge-detail-spacing">500 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Friends, Romans, Countrymen...
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">Network</span>
+                    <span class="challenge-points challenge-detail-spacing">1500 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Follow all protocols
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Security by obscurity
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="challenge-card">
+        <div class="challenge-card-content">
+            <div>
+                <div class="challenge-details">
+                    <span class="challenge-category challenge-detail-spacing">OWASP</span>
+                    <span class="challenge-points challenge-detail-spacing">300 pts</span>
+                    <span class="challenge-status">?</span>
+                </div>
+                <div class="challenge-title">
+                    Placeholder
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.7",
+  "version": "1.0.0",
+  "id": "3a99e7fa-95ab-4d6d-97d4-6352dacece26",
+  "packageName": "software.crowley.ctf.tab",
+  "developer": {
+    "name": "Crowley Software",
+    "websiteUrl": "https://crowley.software",
+    "privacyUrl": "https://263a709777e8.ngrok.io/privacy",
+    "termsOfUseUrl": "https://263a709777e8.ngrok.io//tou"
+  },
+  "icons": {
+    "color": "icon-color.png",
+    "outline": "icon-outline.png"
+  },
+  "name": {
+    "short": "CTF",
+    "full": "CTF App"
+  },
+  "description": {
+    "short": "short description here",
+    "full": "full description here"
+  },
+  "accentColor": "#D85028",
+  "staticTabs": [
+    {
+      "entityId": "ctftab",
+      "name": "CTF",
+      "contentUrl": "https://263a709777e8.ngrok.io/",
+      "websiteUrl": "https://263a709777e8.ngrok.io/",
+      "scopes": [
+        "personal"
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+    "263a709777e8.ngrok.io",
+    "toDo.ngrok.io"
+  ]
+}
