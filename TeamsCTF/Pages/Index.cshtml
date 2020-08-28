@@ -35,15 +35,15 @@
         grid-auto-rows: auto;
     }
 
-    .challenge-card:hover{
-        cursor:pointer;
-        transform:scale(1.05);
+    .challenge-card:hover {
+        cursor: pointer;
+        transform: scale(1.05);
     }
 
     .challenge-card {
         border: 1px solid white;
-        border-radius: 4px;   
-        background-color:#212020;
+        border-radius: 4px;
+        background-color: #212020;
     }
 
     .challenge-card-content {
@@ -83,9 +83,8 @@
         color: #0094ff;
     }
 
-    .total-overlay {
-        z-index: 10;
-       /* position: fixed;
+    .total-overlay-blur {
+        /* position: fixed;
         left: 0px;
         top: 0px;
         width: 100%;
@@ -93,8 +92,15 @@
         filter: blur(4px);
     }
 
+    .total-overlay {
+    }
+
+    .hide {
+        display: none;
+    }
+
     .challenge-overlay {
-        display:none;
+        display: grid;
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -115,12 +121,13 @@
     }
 </style>
 
-<div class="challenge-overlay">
+<div id="challenge-popup" class="hide">
     <div class="challenge-popup">
+        <button>Close</button>
         <svg viewBox="10 10 100 100" height="24" version="1.1" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -1028.4)"><path d="m5 1030.4c-1.1046 0-2 0.9-2 2v8 4 6c0 1.1 0.8954 2 2 2h14c1.105 0 2-0.9 2-2v-6-4-4l-6-6h-10z" fill="#95a5a6" /><path d="m5 1029.4c-1.1046 0-2 0.9-2 2v8 4 6c0 1.1 0.8954 2 2 2h14c1.105 0 2-0.9 2-2v-6-4-4l-6-6h-10z" fill="#bdc3c7" /><path d="m21 1035.4-6-6v4c0 1.1 0.895 2 2 2h4z" fill="#95a5a6" /></g></svg>
     </div>
 </div>
-<div class="total-overlayv">
+<div id="total-overlay">
     <div class="wrapper">
         <div class="inmiddle"><span class="leethdr">c4p7ur3 7h3 fl46</span></div>
         <div><span class="heading">Challenges</span></div>
@@ -157,7 +164,7 @@
             </div>
         </div>
 
-        <div class="challenge-card">
+        <div class="challenge-card" id="image-is-everything">
             <div class="challenge-card-content">
                 <div>
                     <div class="challenge-details">

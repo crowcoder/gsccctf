@@ -10,4 +10,12 @@ window.addEventListener('load', (evt) => {
         teamsCtx = c;
         document.querySelector("#username").innerHTML = c.userPrincipalName;
     });
+
+    document.querySelector("#image-is-everything").addEventListener("click", () => {
+        let challengepopup = document.querySelector("#challenge-popup");
+        challengepopup.classList = "challenge-overlay";
+
+        let overlay = document.querySelector("#total-overlay");
+        overlay.classList = "total-overlay-blur";
+    });
 });
