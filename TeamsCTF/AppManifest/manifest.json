@@ -1,19 +1,18 @@
 ﻿{
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.7",
-  "version": "1.0.0",
-  "showLoadingIndicator": true,
+  "version": "1.1.0",
   "id": "3a99e7fa-95ab-4d6d-97d4-6352dacece26",
   "packageName": "software.crowley.ctf.tab",
   "developer": {
     "name": "Crowley Software",
-    "websiteUrl": "https://crowley.software",
-    "privacyUrl": "https://gscc-ctf.azurewebsites.net/privacy",
+    "websiteUrl": "https://gscc-ctf.azurewebsites.net",
+    "privacyUrl": "https://gscc-ctf.azurewebsites.net/Privacy",
     "termsOfUseUrl": "https://gscc-ctf.azurewebsites.net/tou"
   },
   "icons": {
-    "color": "color.png",
-    "outline": "outline.png"
+    "color": "icon-color.png",
+    "outline": "icon-outline.png"
   },
   "name": {
     "short": "CTF",
@@ -24,14 +23,12 @@
     "full": "The official Granite State Code Camp Capture the Flag (CTF) challenge. Have fun, learn about software security, engage with others and maybe even become this year's champion."
   },
   "accentColor": "#267938",
-  "staticTabs": [
+  "configurableTabs": [
     {
-      "entityId": "ctftab",
-      "name": "CTF",
-      "contentUrl": "https://gscc-ctf.azurewebsites.net/",
-      "websiteUrl": "https://gscc-ctf.azurewebsites.net/",
+      "configurationUrl": "https://gscc-ctf.azurewebsites.net/config",
+      "canUpdateConfiguration": false,
       "scopes": [
-        "personal"
+        "team"
       ]
     }
   ],

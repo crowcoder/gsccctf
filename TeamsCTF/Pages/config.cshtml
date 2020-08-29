@@ -1,0 +1,24 @@
+﻿@page
+@model TeamsCTF.Pages.configModel
+@{
+}
+
+<h2 style="color:white;">There is no configuration necessary. Press Save....</h2>
+
+<script>
+    window.addEventListener('load', (evt) => {
+        microsoftTeams.initialize();
+        microsoftTeams.settings.setValidityState(true);
+
+        microsoftTeams.settings.registerOnSaveHandler((saveEvent) => {
+            microsoftTeams.settings.setSettings({
+                websiteUrl: "https://gscc-ctf.azurewebsites.net",
+                contentUrl: "https://gscc-ctf.azurewebsites.net",
+                entityId: "ctfTab",
+                suggestedDisplayName: "CTF"
+            });
+            saveEvent.notifySuccess();
+        });
+
+    });
+</script>
