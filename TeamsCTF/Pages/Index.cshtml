@@ -118,13 +118,122 @@
         grid-column: 2;
         grid-row: 2;
         color: black;
+        background-image: url( "./images/gscc_nh_text.png");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: 30%;
+    }
+
+    .popup-wrapper {
+        display: grid;
+        grid-template-rows: .5fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .popup-hdr {
+        text-align: right;
+    }
+
+    .popup-body {
+        margin: 20px;
+    }
+
+    .popup-detail {
+        color: black;
+        font-size: 1.1em;
+    }
+
+    .center {
+        margin: auto;
+        width: 99%;
+        padding: 10px;
+    }
+
+    .wrong {
+    }
+
+    .correct {
     }
 </style>
 
+<div id="popup-correct" class="hide">
+    <div class="challenge-popup container">
+        <div class="popup-hdr">
+            <button type="button" class="btn btn-link" onclick="hidePopup('popup-correct');"><code>c1053</code></button>
+        </div>
+        <div class="popup-body">
+            <div class="popup-detail">
+                Well Done! You got it right.
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup-wrong" class="hide">
+    <div class="challenge-popup container">
+        <div class="popup-hdr">
+            <button type="button" class="btn btn-link" onclick="hidePopup('popup-wrong');"><code>c1053</code></button>
+        </div>
+        <div class="popup-body">
+            <div class="popup-detail">
+                Nope. Try again.
+            </div>
+        </div>
+    </div>
+</div>
 <div id="challenge-popup" class="hide">
-    <div class="challenge-popup">
-        <button>Close</button>
-        <svg viewBox="10 10 100 100" height="24" version="1.1" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"><g transform="translate(0 -1028.4)"><path d="m5 1030.4c-1.1046 0-2 0.9-2 2v8 4 6c0 1.1 0.8954 2 2 2h14c1.105 0 2-0.9 2-2v-6-4-4l-6-6h-10z" fill="#95a5a6" /><path d="m5 1029.4c-1.1046 0-2 0.9-2 2v8 4 6c0 1.1 0.8954 2 2 2h14c1.105 0 2-0.9 2-2v-6-4-4l-6-6h-10z" fill="#bdc3c7" /><path d="m21 1035.4-6-6v4c0 1.1 0.895 2 2 2h4z" fill="#95a5a6" /></g></svg>
+    <div class="challenge-popup container">
+
+        <div>
+            <div class="popup-hdr">
+                <button type="button" id="close-popup" class="btn btn-link"><code>c1053</code></button>
+            </div>
+            <div class="popup-body">
+                <div class="popup-detail">
+                    For the solution to this challenge, download and analyze the file. When you think you have the flag,
+                    enter it into the box and submit. Wrong guesses could count against you in the leaderboard.
+                </div>
+            </div>
+            <div>
+                <a href="~/resources/ImageIsEverything.txt" download="challenge-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="100%" height="100px" preserveAspectRatio="xMidyMid meet">
+                        <style>
+                            .icon-canvas-transparent {
+                                opacity: 0;
+                                fill: #f6f6f6
+                            }
+
+                            .icon-vs-out {
+                                fill: #f6f6f6
+                            }
+
+                            .icon-vs-bg {
+                                fill: #424242
+                            }
+
+                            .icon-vs-fg {
+                                fill: #f0eff1
+                            }
+
+                            .icon-vs-action-blue {
+                                fill: #00539c
+                            }
+                        </style>
+                        <path class="icon-canvas-transparent" d="M16 0v16H0V0h16z" id="canvas" />
+                        <path class="icon-vs-out" d="M15 4.379V16H2l.012-9.065L0 4.915v-.537l1.851-1.851.166.166L2.02 0h8.601L15 4.379z" id="outline" />
+                        <path class="icon-vs-bg" d="M10.207 1H6v1h3v4h4v8H4V8.931L3 7.927V15h11V4.793L10.207 1zM10 5V2.207L12.793 5H10z" id="iconBg" />
+                        <path class="icon-vs-fg" d="M7.132 2.527L6 3.655V2h3v2.396L7.132 2.527zM10 2.207V5h2.793L10 2.207zM9 6V4.899L4.483 9.416l-.479-.481-.004.02V14h9V6H9z" id="iconFg" />
+                        <path class="icon-vs-action-blue" d="M5 6.063V1H4v5.081l-2.148-2.14-.707.707L4.485 8l3.352-3.352-.707-.707L5 6.063z" id="colorAction" />
+                    </svg>
+                </a>
+            </div>
+            <div>
+                <input type="text" id="challenge-3" placeholder="3n73r 6u355">
+
+                <button id="challenge-3-submit" class="btn btn-primary">5ubm17</button>
+
+            </div>
+        </div>
     </div>
 </div>
 <div id="total-overlay">

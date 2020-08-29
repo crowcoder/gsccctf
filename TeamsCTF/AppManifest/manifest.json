@@ -2,33 +2,34 @@
   "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.7/MicrosoftTeams.schema.json",
   "manifestVersion": "1.7",
   "version": "1.0.0",
+  "showLoadingIndicator": true,
   "id": "3a99e7fa-95ab-4d6d-97d4-6352dacece26",
   "packageName": "software.crowley.ctf.tab",
   "developer": {
     "name": "Crowley Software",
     "websiteUrl": "https://crowley.software",
-    "privacyUrl": "https://263a709777e8.ngrok.io/privacy",
-    "termsOfUseUrl": "https://263a709777e8.ngrok.io//tou"
+    "privacyUrl": "https://gscc-ctf.azurewebsites.net/privacy",
+    "termsOfUseUrl": "https://gscc-ctf.azurewebsites.net/tou"
   },
   "icons": {
-    "color": "icon-color.png",
-    "outline": "icon-outline.png"
+    "color": "color.png",
+    "outline": "outline.png"
   },
   "name": {
     "short": "CTF",
-    "full": "CTF App"
+    "full": "Capture The Flag"
   },
   "description": {
-    "short": "short description here",
-    "full": "full description here"
+    "short": "Fun and educational software security challenges",
+    "full": "The official Granite State Code Camp Capture the Flag (CTF) challenge. Have fun, learn about software security, engage with others and maybe even become this year's champion."
   },
-  "accentColor": "#D85028",
+  "accentColor": "#267938",
   "staticTabs": [
     {
       "entityId": "ctftab",
       "name": "CTF",
-      "contentUrl": "https://263a709777e8.ngrok.io/",
-      "websiteUrl": "https://263a709777e8.ngrok.io/",
+      "contentUrl": "https://gscc-ctf.azurewebsites.net/",
+      "websiteUrl": "https://gscc-ctf.azurewebsites.net/",
       "scopes": [
         "personal"
       ]
@@ -39,7 +40,6 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "263a709777e8.ngrok.io",
-    "toDo.ngrok.io"
+    "gscc-ctf.azurewebsites.net"
   ]
 }

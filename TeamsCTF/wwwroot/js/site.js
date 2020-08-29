@@ -12,10 +12,38 @@ window.addEventListener('load', (evt) => {
     });
 
     document.querySelector("#image-is-everything").addEventListener("click", () => {
-        let challengepopup = document.querySelector("#challenge-popup");
-        challengepopup.classList = "challenge-overlay";
+        showPopup("challenge-popup");
+    });
 
-        let overlay = document.querySelector("#total-overlay");
-        overlay.classList = "total-overlay-blur";
+    document.querySelector("#close-popup").addEventListener("click", () => {
+        hidePopup("challenge-popup");
+    });
+
+    document.querySelector("#challenge-3-submit").addEventListener("click", (e) => {
+        hidePopup("challenge-popup");
+        let answerbox = document.querySelector("#challenge-3");
+        if (answerbox.value === "All Your Base Are Belong To Us") {
+            showPopup("popup-correct");
+        } else {
+            showPopup("popup-wrong");
+        }
+        e.preventDefault;
+        return false;
     });
 });
+
+function hidePopup(popupId) {
+    let challengepopup = document.querySelector("#" + popupId);
+    challengepopup.classList = "hide";
+
+    let overlay = document.querySelector("#total-overlay");
+    overlay.classList = null;
+}
+
+function showPopup(popupId) {
+    let challengepopup = document.querySelector("#" + popupId);
+    challengepopup.classList = "challenge-overlay";
+
+    let overlay = document.querySelector("#total-overlay");
+    overlay.classList = "total-overlay-blur";
+}
