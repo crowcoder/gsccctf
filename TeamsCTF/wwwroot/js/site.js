@@ -15,6 +15,10 @@ window.addEventListener('load', (evt) => {
         showPopup("challenge-popup");
     });
 
+    document.querySelector("#env-friendly").addEventListener("click", () => {
+        showPopup("challenge-popup-8");
+    });
+
     document.querySelector("#close-popup").addEventListener("click", () => {
         hidePopup("challenge-popup");
     });
