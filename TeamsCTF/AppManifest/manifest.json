@@ -6,9 +6,9 @@
   "packageName": "software.crowley.ctf.tab",
   "developer": {
     "name": "Crowley Software",
-    "websiteUrl": "https://gscc-ctf.azurewebsites.net",
-    "privacyUrl": "https://gscc-ctf.azurewebsites.net/Privacy",
-    "termsOfUseUrl": "https://gscc-ctf.azurewebsites.net/tou"
+    "websiteUrl": "https://localhost:5001",
+    "privacyUrl": "https://localhost:5001/Privacy",
+    "termsOfUseUrl": "https://localhost:5001/tou"
   },
   "icons": {
     "color": "icon-color.png",
@@ -25,7 +25,7 @@
   "accentColor": "#267938",
   "configurableTabs": [
     {
-      "configurationUrl": "https://gscc-ctf.azurewebsites.net/config",
+      "configurationUrl": "https://localhost:5001/config",
       "canUpdateConfiguration": false,
       "scopes": [
         "team"
@@ -37,6 +37,7 @@
     "messageTeamMembers"
   ],
   "validDomains": [
-    "gscc-ctf.azurewebsites.net"
+    "gscc-ctf.azurewebsites.net",
+    "b2926524eee6.ngrok.io"
   ]
 }

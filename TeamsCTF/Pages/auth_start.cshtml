@@ -1,0 +1,34 @@
+﻿@page
+@model TeamsCTF.Pages.auth_startModel
+
+<script>
+    window.addEventListener('load', (evt) => {
+
+        microsoftTeams.initialize();
+
+        microsoftTeams.getContext(function (context) {
+            // Generate random state string and store it, so we can verify it in the callback
+            let state = "123333"; // _guid() is a helper function in the sample
+            localStorage.setItem("simple.state", state);
+            localStorage.removeItem("simple.error");
+            // Go to the Azure AD authorization endpoint
+            let queryParams = {
+                client_id: "0f7fe2ef-8988-47de-ad13-9aec0b7d60c0",
+                response_type: "id_token token",
+                response_mode: "fragment",
+                resource: "https://graph.microsoft.com/User.Read openid",
+                redirect_uri: window.location.origin + "/tab-auth/simple-end",
+                nonce: "3434439",
+                state: state,
+                // The context object is populated by Teams; the loginHint attribute
+                // is used as hinting information
+                login_hint: context.loginHint,
+            };
+            alert(context.tid);
+            let authorizeEndpoint = "https://login.microsoftonline.com/" + context.tid + "/oauth2/v2.0/authorize?" + toQueryString(queryParams);
+            window.location.assign(authorizeEndpoint);
+        });
+    });
+
+
+</script>
